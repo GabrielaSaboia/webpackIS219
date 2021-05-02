@@ -2,6 +2,7 @@ import TestJS from './TestJs';
 import ConsoleLogIt from './ConsoleLogIt';
 import getJSON from './getJSON';
 import MyAlert from './MyAlert';
+import TableGenerator from '../../server/models/TableGenerator';
 
 TestJS();
 getJSON('', (data) => {
@@ -17,8 +18,8 @@ getJSON('http://localhost:8000/api/v1/cities',
       const data = Object.keys((records.data[0]));
       const dataRecords = records.data;
 
-      generateTableHead(table, data);
-      generateTable(table, dataRecords);
+      TableGenerator.generateTableHead(table, data);
+      TableGenerator.generateTable(table, dataRecords);
       /*
             let data = Object.keys(records.data[0]);
             generateTable(table, records.data); // generate the table first
@@ -26,28 +27,4 @@ getJSON('http://localhost:8000/api/v1/cities',
              */
     }
   });
-ConsoleLogIt('this workedss  in the bundle');
-
-function generateTableHead(table, data) {
-  const thead = table.createTHead();
-  const row = thead.insertRow();
-  for (const key of data) {
-    const th = document.createElement('th');
-    const text = document.createTextNode(key);
-    th.appendChild(text);
-    row.appendChild(th);
-  }
-}
-
-function generateTable(table, data) {
-  for (const element of data) {
-    const row = table.insertRow();
-    console.log(element);
-    let key;
-    for (key in element) {
-      const cell = row.insertCell();
-      const text = document.createTextNode(element[key]);
-      cell.appendChild(text);
-    }
-  }
-}
+ConsoleLogIt('this workeds  in the bundle');

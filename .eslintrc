@@ -8,7 +8,6 @@
     "no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }]
   },
   "env": {
-    "browser": true,
-    "node": true
+    "browser": true
   }
 }
