@@ -1,6 +1,7 @@
 import TestJS from './TestJs';
 import ConsoleLogIt from './ConsoleLogIt';
 import getJSON from './getJSON';
+import MyAlert from './MyAlert';
 
 TestJS();
 getJSON('', (data) => {
@@ -10,7 +11,7 @@ getJSON('', (data) => {
 getJSON('http://localhost:8000/api/v1/cities',
   (err, records) => {
     if (err !== null) {
-      alert(`Something went wrong: ${err}`);
+      MyAlert(`Something went wrong: ${err}`);
     } else {
       const table = document.querySelector('table');
       const data = Object.keys((records.data[0]));
