@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb"],
+  "extends": ["airbnb"], //rules airbnb developers have to use when they write javascript -- style guide ** airbnb eslint style guide
   "rules": {
     "prefer-destructuring": ["error", {"object": false, "array": false}],
     "max-len": [1, 300, 2, { "ignoreComments": true }],

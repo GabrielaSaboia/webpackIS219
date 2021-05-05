@@ -20,11 +20,6 @@ getJSON('http://localhost:8000/api/v1/cities',
 
       TableGenerator.generateTableHead(table, data);
       TableGenerator.generateTable(table, dataRecords);
-      /*
-            let data = Object.keys(records.data[0]);
-            generateTable(table, records.data); // generate the table first
-            generateTableHead(table, data); // then the head
-             */
     }
   });
-ConsoleLogIt('this workeds  in the bundle');
+ConsoleLogIt('this worked in the bundle');
