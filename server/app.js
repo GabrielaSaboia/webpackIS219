@@ -1,9 +1,9 @@
-const express = require('express');
-const open = require('open');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+const express = require('express');//express module import
+const open = require('open');//open module import
+const bodyParser = require('body-parser');//body parser module import
+const cors = require('cors');//cors module import
 
-const app = express();
+const app = express();//declaration of app
 app.use(cors());
 app.use(express.static('docs'));
 // parse requests of content-type - application/x-www-form-urlencoded

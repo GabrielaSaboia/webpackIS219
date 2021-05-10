@@ -6,7 +6,6 @@
 
 const express = require("express");
 const path = require("path");
-
 const expressSession = require("express-session");
 const passport = require("passport");
 const Auth0Strategy = require("passport-auth0");
