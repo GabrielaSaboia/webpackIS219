@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 // define a root route
-// Require employee routes
+// Require city routes
 const citiesRoutes = require('./routes/cities.routes');
 // using as middleware
 app.use('/api/v1/cities', citiesRoutes);
